@@ -24,6 +24,7 @@
 		6C6BD1901EC95A4F00729FEC /* News+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6BD18A1EC95A4F00729FEC /* News+CoreDataProperties.m */; };
 		6C6BD1911EC95A4F00729FEC /* Image+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6BD18C1EC95A4F00729FEC /* Image+CoreDataClass.m */; };
 		6C6BD1921EC95A4F00729FEC /* Image+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6BD18E1EC95A4F00729FEC /* Image+CoreDataProperties.m */; };
+		6C6BD1951EC95B7F00729FEC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6BD1941EC95B7F00729FEC /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		6C6BD18C1EC95A4F00729FEC /* Image+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Image+CoreDataClass.m"; path = "../Image+CoreDataClass.m"; sourceTree = "<group>"; };
 		6C6BD18D1EC95A4F00729FEC /* Image+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Image+CoreDataProperties.h"; path = "../Image+CoreDataProperties.h"; sourceTree = "<group>"; };
 		6C6BD18E1EC95A4F00729FEC /* Image+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Image+CoreDataProperties.m"; path = "../Image+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6C6BD1931EC95B7F00729FEC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		6C6BD1941EC95B7F00729FEC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 		6C6BD1551EC93CC800729FEC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6C6BD1931EC95B7F00729FEC /* Reachability.h */,
+				6C6BD1941EC95B7F00729FEC /* Reachability.m */,
 				6C6BD1561EC93CDD00729FEC /* Constants.h */,
 				6C6BD1571EC93D2F00729FEC /* Info.pch */,
 			);
@@ -286,6 +291,7 @@
 				TargetAttributes = {
 					6C6BD1171EC7B28D00729FEC = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = H3UG82QKKM;
 						ProvisioningStyle = Automatic;
 					};
 					6C6BD1331EC7B28D00729FEC = {
@@ -352,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6BD1951EC95B7F00729FEC /* Reachability.m in Sources */,
 				6C6BD1231EC7B28D00729FEC /* ViewController.m in Sources */,
 				6C6BD1291EC7B28D00729FEC /* Info.xcdatamodeld in Sources */,
 				6C6BD1201EC7B28D00729FEC /* AppDelegate.m in Sources */,
@@ -514,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H3UG82QKKM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Info/Info.pch;
 				INFOPLIST_FILE = Info/Info.plist;
@@ -527,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H3UG82QKKM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Info/Info.pch;
 				INFOPLIST_FILE = Info/Info.plist;

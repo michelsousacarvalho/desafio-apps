@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "HTTPRequest.h"
+#import "Reachability.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) Reachability *reachability;
 
 @end
 
@@ -22,24 +25,48 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [HTTPRequest makeGETRequestToURL:URLRequest withCompletionHandler:^(id result, NSError *error) {
-//        NSLog(@"%@", result);
-        if(result){
-            NSDictionary *infos = [result objectAtIndex:0];
-            NSArray *conteudos = [infos objectForKey:@"conteudos"];
-            
-            for (NSDictionary *dict in conteudos) {
-                
-            }
-            
-            
-//            NSLog(@"%@", infos);
-        }
-    }];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(checkForReachability)
+                                                 name: kReachabilityChangedNotification
+                                               object:nil];
+    
+    
+    self.reachability = [Reachability reachabilityForInternetConnection];
+    [self.reachability startNotifier];
+
+    
+//    [HTTPRequest makeGETRequestToURL:URLRequest withCompletionHandler:^(id result, NSError *error) {
+////        NSLog(@"%@", result);
+//        if(result){
+//            NSDictionary *infos = [result objectAtIndex:0];
+//            NSArray *conteudos = [infos objectForKey:@"conteudos"];
+//            
+//            for (NSDictionary *dict in conteudos) {
+//                
+//            }
+//            
+//            
+////            NSLog(@"%@", infos);
+//        }
+//    }];
     
     
     return YES;
 }
+
+-(void) checkForReachability {
+    NetworkStatus status = [self.reachability currentReachabilityStatus];
+    
+    if(status == NotReachable){
+        NSLog(@"Sem internet");
+        // Mostrar View sem internet
+    } else {
+        NSLog(@"Com internet");
+    }
+    
+    
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
