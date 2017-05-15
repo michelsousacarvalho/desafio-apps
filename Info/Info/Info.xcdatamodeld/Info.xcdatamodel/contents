@@ -7,7 +7,7 @@
     </entity>
     <entity name="News" representedClassName="News" syncable="YES">
         <attribute name="autor" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dataPublicacao" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dataPublicacao" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="editoria" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subtitulo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="texto" optional="YES" attributeType="String" syncable="YES"/>

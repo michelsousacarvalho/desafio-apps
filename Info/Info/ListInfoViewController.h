@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListInfoViewController : UIViewController
+@interface ListInfoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

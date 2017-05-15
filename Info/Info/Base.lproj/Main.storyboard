@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="100" id="iXb-KZ-bCN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="100" id="iXb-KZ-bCN" customClass="NewsImageCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iXb-KZ-bCN" id="2dF-3n-mXa">
@@ -52,8 +52,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="editoria" destination="wP4-Mi-Cas" id="7nS-RE-c56"/>
+                                            <outlet property="imageNews" destination="Jjh-O2-KbG" id="flh-dy-Fsg"/>
+                                            <outlet property="titleNews" destination="GIb-5t-mEZ" id="PYd-BU-CyF"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="capaCell" rowHeight="208" id="duv-ke-zGk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coverCell" rowHeight="208" id="duv-ke-zGk" customClass="CoverCell">
                                         <rect key="frame" x="0.0" y="128" width="375" height="208"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="duv-ke-zGk" id="f9J-Gk-yOo">
@@ -85,8 +90,13 @@
                                                 <constraint firstItem="Kgg-wX-mZF" firstAttribute="top" secondItem="f9J-Gk-yOo" secondAttribute="top" id="ean-jB-f8y"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="author" destination="48z-bx-vvq" id="bD2-X1-LgU"/>
+                                            <outlet property="image" destination="Kgg-wX-mZF" id="Wsg-ue-oSw"/>
+                                            <outlet property="titleNews" destination="Y1E-QM-RgK" id="r00-Li-ByM"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="Hz5-oU-qFC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="95" id="Hz5-oU-qFC" customClass="NewsCell">
                                         <rect key="frame" x="0.0" y="336" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hz5-oU-qFC" id="6UR-3V-00h">
@@ -109,6 +119,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="editoria" destination="c04-Pf-imb" id="3bi-h9-XmS"/>
+                                            <outlet property="titleNews" destination="hxR-bn-UoQ" id="yb1-9E-Um8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -123,6 +137,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="O GLOBO" id="iIa-xJ-MFb"/>
                     <connections>
+                        <outlet property="tableView" destination="MAd-eJ-aoo" id="s9U-5k-2vM"/>
                         <segue destination="NPe-sK-7US" kind="show" id="69d-hy-fxu"/>
                     </connections>
                 </viewController>
@@ -187,7 +202,7 @@
                                         <rect key="frame" x="12" y="333" width="350" height="255"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.asda</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.asda</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -216,7 +231,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xY4-iQ-LVC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Y4X-aJ-JNw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Y4X-aJ-JNw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.12156862745098039" green="0.36862745098039218" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

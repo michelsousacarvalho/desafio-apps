@@ -15,6 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface News : NSManagedObject
 
++(NSUInteger)countNews;
++(News *) createNews;
++(void) saveNews:(News*) news;
++(NSArray *) getAllNews;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,8 +11,11 @@
 
 
 #define URLRequest @"https://raw.githubusercontent.com/Infoglobo/desafio-apps/master/capa.json"
-#define capaCell @"capaCell"
-#define imageCell @"imageCell"
+#define coverCellIdentifies @"coverCell"
+#define imageCellIdentifier @"imageCell"
+#define newsCellIdentifier @"newsCell"
+#define EntityNews @"News"
+#define EntityImage @"Image"
 
 
 

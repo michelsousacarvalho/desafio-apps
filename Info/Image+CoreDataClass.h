@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Image : NSManagedObject
 
++(Image *) createImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *texto;
 @property (nullable, nonatomic, copy) NSString *editoria;
 @property (nullable, nonatomic, copy) NSString *autor;
-@property (nullable, nonatomic, copy) NSDate *dataPublicacao;
+@property (nullable, nonatomic, copy) NSString *dataPublicacao;
 @property (nullable, nonatomic, retain) Image *image;
 
 @end

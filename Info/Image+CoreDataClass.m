@@ -8,7 +8,14 @@
 
 #import "Image+CoreDataClass.h"
 #import "News+CoreDataClass.h"
+#import "DataStore.h"
 
 @implementation Image
+
++(Image *) createImage {
+    Image *image = (Image*) [[DataStore sharedManager] createObjectWithEntityName:EntityImage];
+    return image;
+}
+
 
 @end

@@ -8,7 +8,32 @@
 
 #import "News+CoreDataClass.h"
 #import "Image+CoreDataClass.h"
+#import "DataStore.h"
 
 @implementation News
+
+
++(NSUInteger)countNews {
+    return [[DataStore sharedManager] countObjectsForEntity:EntityNews];
+}
+
+
++(News *) createNews {
+    News *news = (News*) [[DataStore sharedManager] createObjectWithEntityName:EntityNews];
+    
+    return news;
+}
+
++(void) saveNews:(News*) news {
+    [[DataStore sharedManager] updateManagedObject:news];
+}
+
+
++(NSArray *) getAllNews {
+    NSMutableArray *allNews = [[DataStore sharedManager] loadObjectsForEntity:EntityNews withParameterDictionary:nil];
+    return allNews;
+}
+
+
 
 @end
