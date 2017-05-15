@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="Image" representedClassName="Image" syncable="YES" codeGenerationType="class">
+    <entity name="Image" representedClassName="Image" syncable="YES">
         <attribute name="legenda" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="urlImage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="News" inverseName="image" inverseEntity="News" syncable="YES"/>
     </entity>
-    <entity name="Info" representedClassName="Info" syncable="YES" codeGenerationType="class">
+    <entity name="News" representedClassName="News" syncable="YES">
         <attribute name="autor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dataPublicacao" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="editoria" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subtitulo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="texto" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="info" inverseEntity="Image" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Info" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="Image" positionX="-54" positionY="36" width="128" height="75"/>
+        <element name="News" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Image" positionX="-54" positionY="36" width="128" height="90"/>
     </elements>
 </model>

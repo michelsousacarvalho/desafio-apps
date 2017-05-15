@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HTTPRequest.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,28 @@
 @implementation AppDelegate
 
 
+
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [HTTPRequest makeGETRequestToURL:URLRequest withCompletionHandler:^(id result, NSError *error) {
+//        NSLog(@"%@", result);
+        if(result){
+            NSDictionary *infos = [result objectAtIndex:0];
+            NSArray *conteudos = [infos objectForKey:@"conteudos"];
+            
+            for (NSDictionary *dict in conteudos) {
+                
+            }
+            
+            
+//            NSLog(@"%@", infos);
+        }
+    }];
+    
+    
     return YES;
 }
 

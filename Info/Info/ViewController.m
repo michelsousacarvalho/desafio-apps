@@ -20,9 +20,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    [HTTPRequest makeGETRequestToURL:URLRequest withCompletionHandler:^(id result, NSError *error) {
-        NSLog(@"%@", result);
-    }];
+//    [HTTPRequest makeGETRequestToURL:URLRequest withCompletionHandler:^(id result, NSError *error) {
+//        NSLog(@"%@", result);
+//    }];
     
     
     
