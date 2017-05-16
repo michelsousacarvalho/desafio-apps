@@ -7,10 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "HTTPRequest.h"
 #import "Reachability.h"
-#import "News+CoreDataClass.h"
-#import "Image+CoreDataClass.h"
+#import "NewsRequest.h"
 
 
 @interface AppDelegate ()
@@ -86,42 +84,15 @@
 }
 
 -(void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-//    NSLog(@"Entrou no método performFetchWithCompletionHandler");
-//    NSDate *fetchStart = [NSDate date];
-//    NSLog(@"Inicio Background Fetch");
-//    
-//    [HTTPRequest makeGETRequestToURL:URLRequest withCompletionHandler:^(id result, NSError *error) {
-//        if(result){
-//            NSDictionary *infos = [result objectAtIndex:0];
-//            NSArray *conteudos = [infos objectForKey:@"conteudos"];
-//            
-//            for (NSDictionary *dict in conteudos) {
-//                News *news = [News createNews];
-//                news.titulo = [dict objectForKey:@"titulo"];
-//                news.subtitulo = [dict objectForKey:@"subTitulo"];
-//                news.texto = [dict objectForKey:@"texto"];
-//                news.editoria = [[dict objectForKey:@"secao"] objectForKey:@"nome"];
-//                news.dataPublicacao = [dict objectForKey:@"publicadoEm"];
-//                NSArray *imagens = [dict objectForKey:@"imagens"];
-//                if(imagens.count > 0){
-//                    Image *image = [Image createImage];
-//                    image.urlImage = [[imagens objectAtIndex:0] objectForKey:@"url"];
-//                    image.legenda = [[imagens objectAtIndex:0] objectForKey:@"legenda"];
-//                    news.image = image;
-//                }
-//                
-//                [News saveNews:news];
-//                
-//            }
-//            completionHandler(UIBackgroundFetchResultNewData);
-//        } else {
-//            completionHandler(UIBackgroundFetchResultNoData);
-//        }
-//        NSDate *fetchEnd = [NSDate date];
-//        NSTimeInterval timeElapsed = [fetchEnd timeIntervalSinceDate:fetchStart];
-//        NSLog(@"Duraçao Background Fetch : %f segundos", timeElapsed);
-//    }];
-//    
+    
+    [NewsRequest requestNewsBackgroundFetch:^(BOOL newData) {
+        if(newData){
+            completionHandler(UIBackgroundFetchResultNewData);
+        } else {
+            completionHandler(UIBackgroundFetchResultNoData);
+        }
+    }];
+    
 }
 
 

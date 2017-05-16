@@ -53,8 +53,6 @@
             self.subtitleImage.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f];
         }
         
-        
-        
     }
     
 }

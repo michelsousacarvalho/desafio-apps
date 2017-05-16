@@ -18,6 +18,15 @@
 }
 
 
++(BOOL) verifyExistNewsWithTitle:(NSString *) title {
+    if( [[DataStore sharedManager] loadObjectsForEntity:EntityNews withValue:title forAttribute:@"titulo"].count > 0 ){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
 +(News *) createNews {
     News *news = (News*) [[DataStore sharedManager] createObjectWithEntityName:EntityNews];
     

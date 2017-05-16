@@ -15,4 +15,8 @@
  **/
 +(void) requestNewsAndSaveCoreDataWithCompletion:(void (^) (void)) completion;
 
+/**
+ @brief Faz request verifica se noticia já contém no core data e salva, metodo usado para background fetch
+ **/
++(void) requestNewsBackgroundFetch:(void(^) (BOOL newData)) completion;
 @end

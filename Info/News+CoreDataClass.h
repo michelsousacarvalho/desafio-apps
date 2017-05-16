@@ -21,6 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSUInteger)countNews;
 
 /**
+ @brief Verifica se possui noticia com o mesmo titulo
+ **/
++(BOOL) verifyExistNewsWithTitle:(NSString *) title;
+
+/**
  @brief Cria nova notícia
  **/
 +(News *) createNews;
