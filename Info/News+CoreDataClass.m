@@ -25,7 +25,8 @@
 }
 
 +(void) saveNews:(News*) news {
-    [[DataStore sharedManager] updateManagedObject:news];
+    NSError *error;
+    [[[DataStore sharedManager] managedObjectContext] save:&error];
 }
 
 

@@ -31,6 +31,7 @@
 		6C6BD1B41EC9D20800729FEC /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6BD1AF1EC9D20800729FEC /* ImageCache.m */; };
 		6C6BD1B51EC9D20800729FEC /* ImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6BD1B11EC9D20800729FEC /* ImageRequest.m */; };
 		6C6BD1B61EC9D20800729FEC /* ImageSaveDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6BD1B31EC9D20800729FEC /* ImageSaveDisk.m */; };
+		6CF37C431ECA7E9000AAD49E /* NewsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF37C421ECA7E9000AAD49E /* NewsRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		6C6BD1B11EC9D20800729FEC /* ImageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageRequest.m; sourceTree = "<group>"; };
 		6C6BD1B21EC9D20800729FEC /* ImageSaveDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSaveDisk.h; sourceTree = "<group>"; };
 		6C6BD1B31EC9D20800729FEC /* ImageSaveDisk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSaveDisk.m; sourceTree = "<group>"; };
+		6CF37C411ECA7E9000AAD49E /* NewsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsRequest.h; sourceTree = "<group>"; };
+		6CF37C421ECA7E9000AAD49E /* NewsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 			children = (
 				6C6BD1521EC7B5B400729FEC /* HTTPRequest.h */,
 				6C6BD1531EC7B5B400729FEC /* HTTPRequest.m */,
+				6CF37C411ECA7E9000AAD49E /* NewsRequest.h */,
+				6CF37C421ECA7E9000AAD49E /* NewsRequest.m */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				6C6BD1541EC7B5B400729FEC /* HTTPRequest.m in Sources */,
 				6C6BD1A61EC9CCA500729FEC /* NewsImageCell.m in Sources */,
 				6C6BD16E1EC9568900729FEC /* DataStore.m in Sources */,
+				6CF37C431ECA7E9000AAD49E /* NewsRequest.m in Sources */,
 				6C6BD1A91EC9CD5F00729FEC /* NewsCell.m in Sources */,
 				6C6BD19F1EC9C2D100729FEC /* News+CoreDataProperties.m in Sources */,
 				6C6BD15B1EC93E8600729FEC /* ListInfoViewController.m in Sources */,
@@ -667,6 +673,7 @@
 				6C6BD14A1EC7B28D00729FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C6BD14B1EC7B28D00729FEC /* Build configuration list for PBXNativeTarget "InfoTests" */ = {
 			isa = XCConfigurationList;
@@ -675,6 +682,7 @@
 				6C6BD14D1EC7B28D00729FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C6BD14E1EC7B28D00729FEC /* Build configuration list for PBXNativeTarget "InfoUITests" */ = {
 			isa = XCConfigurationList;
@@ -683,6 +691,7 @@
 				6C6BD1501EC7B28D00729FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

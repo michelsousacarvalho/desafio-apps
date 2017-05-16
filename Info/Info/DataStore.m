@@ -363,7 +363,11 @@ static DataStore *sharedDataConfig = nil;
     NSManagedObjectContext *parentContext = context.parentContext;
     
     if (!context.hasChanges) return;
-
+    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        NSError *error;
+//        [context save: &error];
+//    });
     [context performBlockAndWait:^{
         NSError *error;
         [context save: &error];

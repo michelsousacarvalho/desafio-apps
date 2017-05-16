@@ -22,10 +22,6 @@
 @implementation AppDelegate
 
 
-
-
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
@@ -38,34 +34,7 @@
     self.reachability = [Reachability reachabilityForInternetConnection];
     [self.reachability startNotifier];
 
-    if([News countNews] == 0) {
-        [HTTPRequest makeGETRequestToURL:URLRequest withCompletionHandler:^(id result, NSError *error) {
-            if(result){
-                NSDictionary *infos = [result objectAtIndex:0];
-                NSArray *conteudos = [infos objectForKey:@"conteudos"];
-                
-                for (NSDictionary *dict in conteudos) {
-                    News *news = [News createNews];
-                    news.titulo = [dict objectForKey:@"titulo"];
-                    news.subtitulo = [dict objectForKey:@"subTitulo"];
-                    news.texto = [dict objectForKey:@"texto"];
-                    news.editoria = [[dict objectForKey:@"secao"] objectForKey:@"nome"];
-                    news.dataPublicacao = [dict objectForKey:@"publicadoEm"];
-                    NSArray *imagens = [dict objectForKey:@"imagens"];
-                    if(imagens.count > 0){
-                        Image *image = [Image createImage];
-                        image.urlImage = [[imagens objectAtIndex:0] objectForKey:@"url"];
-                        image.legenda = [[imagens objectAtIndex:0] objectForKey:@"legenda"];
-                        news.image = image;
-                    }
-                    
-                    [News saveNews:news];
-                    
-                }
-            }
-        }];
-        
-    }
+
     
     
     return YES;
@@ -77,6 +46,8 @@
     if(status == NotReachable){
         NSLog(@"Sem internet");
         // Mostrar View sem internet
+        
+        
     } else {
         NSLog(@"Com internet");
     }
