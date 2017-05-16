@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *textNews;
 @property (weak, nonatomic) IBOutlet UILabel *labelPor;
 @property (weak, nonatomic) IBOutlet UILabel *subtitleImage;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightImage;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightView;
 
 @end
 
@@ -53,6 +55,9 @@
             self.subtitleImage.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f];
         }
         
+    } else {
+        self.heightView.constant = self.heightView.constant - self.heightImage.constant;
+        self.heightImage.constant = 10;
     }
     
 }
