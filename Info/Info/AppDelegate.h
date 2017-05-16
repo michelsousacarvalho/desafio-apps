@@ -17,6 +17,11 @@
 
 - (void)saveContext;
 
+/**
+ @brief Checa se possui internet, se não possuir mostrar erro.
+ **/
+-(void) checkInternet;
+
 
 @end
 

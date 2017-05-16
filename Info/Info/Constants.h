@@ -19,6 +19,8 @@
 #define EntityImage @"Image"
 #define OGLOBO @"O GLOBO"
 #define formatDatePublish @"dd/MM/yyyy HH:mm"
+#define ProblemaConectividade @"Problemas de conectividade."
+#define VerificaInternet @"Verifique sua internet e tente mais tarde."
 
 
 #endif /* Constants_h */

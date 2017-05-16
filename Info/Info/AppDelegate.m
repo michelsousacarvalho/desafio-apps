@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Reachability.h"
 #import "NewsRequest.h"
+#import "TSMessage.h"
 
 
 @interface AppDelegate ()
@@ -24,33 +25,25 @@
     // Override point for customization after application launch.
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(checkForReachability)
+                                             selector:@selector(checkInternet)
                                                  name: kReachabilityChangedNotification
                                                object:nil];
     
     
     self.reachability = [Reachability reachabilityForInternetConnection];
     [self.reachability startNotifier];
-
-
-    
-    
     return YES;
 }
 
--(void) checkForReachability {
+-(void) checkInternet {
     NetworkStatus status = [self.reachability currentReachabilityStatus];
-    
     if(status == NotReachable){
-        NSLog(@"Sem internet");
-        // Mostrar View sem internet
+        [TSMessage showNotificationWithTitle:ProblemaConectividade
+                                    subtitle:VerificaInternet
+                                        type:TSMessageNotificationTypeError];
+
         
-        
-    } else {
-        NSLog(@"Com internet");
     }
-    
-    
 }
 
 

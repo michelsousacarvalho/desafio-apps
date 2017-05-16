@@ -16,6 +16,7 @@
 #import "ImageCache.h"
 #import "NewsRequest.h"
 #import "ShowInfoViewController.h"
+#import "AppDelegate.h"
 
 @interface ListInfoViewController ()
 @property (nonatomic, strong) NSArray *allNews;
@@ -27,6 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    AppDelegate *appDelegate = (AppDelegate*) [UIApplication sharedApplication].delegate;
+    [appDelegate checkInternet];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
