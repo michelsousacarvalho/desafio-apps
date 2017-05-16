@@ -31,6 +31,10 @@
                         news.texto = [dict objectForKey:@"texto"];
                         news.editoria = [[dict objectForKey:@"secao"] objectForKey:@"nome"];
                         news.dataPublicacao = [dict objectForKey:@"publicadoEm"];
+                        NSArray *autores = [dict objectForKey:@"autores"];
+                        if(autores.count > 0){
+                            news.autor = [autores objectAtIndex:0];
+                        }
                         NSArray *imagens = [dict objectForKey:@"imagens"];
                         if(imagens.count > 0){
                             Image *image = [Image createImage];

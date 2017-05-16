@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "News+CoreDataClass.h"
 
 @interface ShowInfoViewController : UIViewController
+
+@property (nonatomic, strong) News *newsSelected;
+
 
 @end

@@ -10,4 +10,14 @@
 
 @implementation NSDate (FormattedDate)
 
+
++(NSString*) formatDate:(NSString*) dateString withFormat:(NSString *) format {
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
+    NSDate *date = [dateFormat dateFromString:dateString];
+    [dateFormat setDateFormat:format];
+    return [dateFormat stringFromDate:date];
+}
+
+
 @end

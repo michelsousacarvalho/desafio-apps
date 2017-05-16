@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Image : NSManagedObject
 
+/**
+ @brief Cria nova image
+ **/
 +(Image *) createImage;
 
 @end

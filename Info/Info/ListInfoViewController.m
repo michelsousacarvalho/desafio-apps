@@ -15,6 +15,7 @@
 #import "NewsImageCell.h"
 #import "ImageCache.h"
 #import "NewsRequest.h"
+#import "ShowInfoViewController.h"
 
 @interface ListInfoViewController ()
 @property (nonatomic, strong) NSArray *allNews;
@@ -37,8 +38,19 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationItem.title  = OGLOBO;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationItem.title = @"";
+}
 
 
+
+#pragma mark - UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -89,7 +101,7 @@
     }
 }
 
-
+#pragma mark - UITableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     News *news = [self.allNews objectAtIndex:indexPath.row];
     if(indexPath.row == 0){
@@ -99,7 +111,12 @@
     } else {
         return 70;
     }
-    
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    News *news = [self.allNews objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:segueShowNews sender:news];
 }
 
 
@@ -109,14 +126,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:segueShowNews]){
+        ShowInfoViewController *showVC = [segue destinationViewController];
+        showVC.newsSelected = sender;
+    }
+    
 }
-*/
+
 
 @end

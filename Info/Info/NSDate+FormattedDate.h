@@ -10,4 +10,8 @@
 
 @interface NSDate (FormattedDate)
 
++(NSString*) formatDate:(NSString*) dateString withFormat:(NSString *) format;
+
+
+
 @end

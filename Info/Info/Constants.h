@@ -14,9 +14,11 @@
 #define coverCellIdentifies @"coverCell"
 #define imageCellIdentifier @"imageCell"
 #define newsCellIdentifier @"newsCell"
+#define segueShowNews @"segueShowNews"
 #define EntityNews @"News"
 #define EntityImage @"Image"
-
+#define OGLOBO @"O GLOBO"
+#define formatDatePublish @"dd/MM/yyyy HH:mm"
 
 
 #endif /* Constants_h */

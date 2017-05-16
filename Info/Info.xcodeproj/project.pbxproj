@@ -32,6 +32,7 @@
 		6C6BD1B51EC9D20800729FEC /* ImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6BD1B11EC9D20800729FEC /* ImageRequest.m */; };
 		6C6BD1B61EC9D20800729FEC /* ImageSaveDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6BD1B31EC9D20800729FEC /* ImageSaveDisk.m */; };
 		6CF37C431ECA7E9000AAD49E /* NewsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF37C421ECA7E9000AAD49E /* NewsRequest.m */; };
+		6CF37C461ECAB1F700AAD49E /* NSDate+FormattedDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF37C451ECAB1F700AAD49E /* NSDate+FormattedDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		6C6BD1B31EC9D20800729FEC /* ImageSaveDisk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSaveDisk.m; sourceTree = "<group>"; };
 		6CF37C411ECA7E9000AAD49E /* NewsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsRequest.h; sourceTree = "<group>"; };
 		6CF37C421ECA7E9000AAD49E /* NewsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsRequest.m; sourceTree = "<group>"; };
+		6CF37C441ECAB1F700AAD49E /* NSDate+FormattedDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FormattedDate.h"; sourceTree = "<group>"; };
+		6CF37C451ECAB1F700AAD49E /* NSDate+FormattedDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FormattedDate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 				6C6BD1941EC95B7F00729FEC /* Reachability.m */,
 				6C6BD1561EC93CDD00729FEC /* Constants.h */,
 				6C6BD1571EC93D2F00729FEC /* Info.pch */,
+				6CF37C441ECAB1F700AAD49E /* NSDate+FormattedDate.h */,
+				6CF37C451ECAB1F700AAD49E /* NSDate+FormattedDate.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CF37C461ECAB1F700AAD49E /* NSDate+FormattedDate.m in Sources */,
 				6C6BD19E1EC9C2D100729FEC /* News+CoreDataClass.m in Sources */,
 				6C6BD1951EC95B7F00729FEC /* Reachability.m in Sources */,
 				6C6BD1231EC7B28D00729FEC /* ViewController.m in Sources */,
@@ -591,6 +597,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.Info;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -605,6 +612,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.Info;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
