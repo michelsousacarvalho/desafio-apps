@@ -1,6 +1,5 @@
-
-  {
-    "conteudos": [
+{
+  "conteudos": [
       {
         "autores": [
           "O GLOBO"
@@ -347,6 +346,5 @@
           }
         ]
       }
-    ],
-    "produto": "OGlobo"
+    ]
   }
